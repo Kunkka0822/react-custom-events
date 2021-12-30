@@ -5,7 +5,7 @@ declare global {
 }
 
 const getElement = (function () {
-    const targetElement = document.createElement('div')
+    const targetElement = typeof window === 'undefined' ? null : document.createElement('div')
 
     return function () {
         return targetElement;
